@@ -1,0 +1,19 @@
+﻿<Window x:Class="_01_Wpf_Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_Wpf_Demo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="647*"/>
+            <ColumnDefinition Width="145*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="PozdravLbl" Content="Ahoj" HorizontalAlignment="Left" Margin="73,76,0,0" VerticalAlignment="Top" Height="60" Width="148" FontSize="18"/>
+        <Button Content="Klikni si!" HorizontalAlignment="Left" Margin="73,157,0,0" VerticalAlignment="Top" Width="190" FontSize="24" FontWeight="Bold" Height="84" BorderBrush="#FF8F0128" Foreground="#FF09D100" Background="#FF1C1563" Click="Button_Click"/>
+        <TextBox x:Name="JmenoTB" HorizontalAlignment="Left" Height="23" Margin="73,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390"/>
+
+    </Grid>
+</Window>
