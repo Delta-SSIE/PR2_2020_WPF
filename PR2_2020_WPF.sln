@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Wpf-Demo", "01-Wpf-Demo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Scitacka", "02_Scitacka\02_Scitacka.csproj", "{FFFA2ED1-74FB-4380-A434-D0A7DF240864}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-MessageBox", "03-MessageBox\03-MessageBox.csproj", "{724F8DDD-780A-404C-B16F-0AF3F23BE163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-CheckBox", "04-CheckBox\04-CheckBox.csproj", "{4C5D3044-A241-454A-8FF9-C7D6F2CEEB6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{FFFA2ED1-74FB-4380-A434-D0A7DF240864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFFA2ED1-74FB-4380-A434-D0A7DF240864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFFA2ED1-74FB-4380-A434-D0A7DF240864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724F8DDD-780A-404C-B16F-0AF3F23BE163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724F8DDD-780A-404C-B16F-0AF3F23BE163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724F8DDD-780A-404C-B16F-0AF3F23BE163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724F8DDD-780A-404C-B16F-0AF3F23BE163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5D3044-A241-454A-8FF9-C7D6F2CEEB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5D3044-A241-454A-8FF9-C7D6F2CEEB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5D3044-A241-454A-8FF9-C7D6F2CEEB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5D3044-A241-454A-8FF9-C7D6F2CEEB6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
