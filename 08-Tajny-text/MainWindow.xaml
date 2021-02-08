@@ -8,8 +8,8 @@
         Title="MainWindow" Height="235.812" Width="628.032">
     <Grid>
         <TextBox Height="20" Margin="73,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="385" x:Name="otevreneTB"  />
+        <PasswordBox HorizontalAlignment="Left" Height="20" Margin="73,99,0,0" VerticalAlignment="Top" Width="385"  x:Name="skrytePwdB" />
         <Button Content="Skryj" HorizontalAlignment="Left" Margin="471,99,0,0" VerticalAlignment="Top" Width="75" x:Name="zobrazSkryjBtn" Click="zobrazSkryjBtn_Click" />
-        <PasswordBox HorizontalAlignment="Left" Height="20" Margin="73,99,0,0" VerticalAlignment="Top"  x:Name="skrytePwdB" />
 
     </Grid>
 </Window>
