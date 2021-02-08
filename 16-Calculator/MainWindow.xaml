@@ -40,30 +40,30 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="0" FontSize="60pt" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" IsEnabled="False" BorderBrush="LightGray" BorderThickness="1" Margin="5, 0, 5, 10"/>
+        <TextBox x:Name="DisplayTB" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="0" FontSize="60pt" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" IsEnabled="False" BorderBrush="LightGray" BorderThickness="1" Margin="5, 0, 5, 10"/>
         
-        <Button x:Name="ACBtn" Content="AC" Grid.Column="0" Grid.Row="1" Style="{StaticResource baseBtnStyle}" Background="{StaticResource otherBtnCol}"/>
-        <Button x:Name="PlusMinusBtn" Content="+/-" Grid.Column="1" Grid.Row="1" Style="{StaticResource baseBtnStyle}"/>
-        <Button x:Name="PercentBtn" Content="%" Grid.Column="2" Grid.Row="1" Style="{StaticResource baseBtnStyle}"/>
-        <Button x:Name="DivisionBtn" Content="/" Grid.Column="3" Grid.Row="1" Style="{StaticResource baseBtnStyle}"/>
+        <Button x:Name="ACBtn" Content="AC" Grid.Column="0" Grid.Row="1" Style="{StaticResource baseBtnStyle}" Background="{StaticResource otherBtnCol}" Click="ACBtn_Click"/>
+        <Button x:Name="PlusMinusBtn" Content="+/-" Grid.Column="1" Grid.Row="1" Style="{StaticResource baseBtnStyle}" Click="PlusMinusBtn_Click"/>
+        <Button x:Name="PercentBtn" Content="%" Grid.Column="2" Grid.Row="1" Style="{StaticResource baseBtnStyle}" Click="PercentBtn_Click"/>
+        <Button x:Name="DivisionBtn" Content="/" Grid.Column="3" Grid.Row="1" Style="{StaticResource baseBtnStyle}" Click="OperationBtn_Click" />
 
-        <Button x:Name="SevenBtn" Content="7" Grid.Column="0" Grid.Row="2" Style="{StaticResource numberBtnStyle}"/>
-        <Button x:Name="EightBtn" Content="8" Grid.Column="1" Grid.Row="2" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="NineBtn" Content="9" Grid.Column="2" Grid.Row="2" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="MultiplyBtn" Content="*" Grid.Column="3" Grid.Row="2" Style="{StaticResource baseBtnStyle}"/>
+        <Button x:Name="SevenBtn" Content="7" Grid.Column="0" Grid.Row="2" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick"/>
+        <Button x:Name="EightBtn" Content="8" Grid.Column="1" Grid.Row="2" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="NineBtn" Content="9" Grid.Column="2" Grid.Row="2" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="MultiplyBtn" Content="*" Grid.Column="3" Grid.Row="2" Style="{StaticResource baseBtnStyle}" Click="OperationBtn_Click"/>
 
-        <Button x:Name="FourBtn" Content="4" Grid.Column="0" Grid.Row="3" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="FiveBtn" Content="5" Grid.Column="1" Grid.Row="3" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="SixBtn" Content="6" Grid.Column="2" Grid.Row="3" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="MinusBtn" Content="-" Grid.Column="3" Grid.Row="3" Style="{StaticResource baseBtnStyle}"/>
+        <Button x:Name="FourBtn" Content="4" Grid.Column="0" Grid.Row="3" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="FiveBtn" Content="5" Grid.Column="1" Grid.Row="3" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="SixBtn" Content="6" Grid.Column="2" Grid.Row="3" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="MinusBtn" Content="-" Grid.Column="3" Grid.Row="3" Style="{StaticResource baseBtnStyle}" Click="OperationBtn_Click"/>
 
-        <Button x:Name="OneBtn" Content="1" Grid.Column="0" Grid.Row="4" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="TwoBtn" Content="2" Grid.Column="1" Grid.Row="4" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="ThreeBtn" Content="3" Grid.Column="2" Grid.Row="4" Style="{StaticResource numberBtnStyle}" />
-        <Button x:Name="PlusBtn" Content="+" Grid.Column="3" Grid.Row="4" Style="{StaticResource baseBtnStyle}"/>
+        <Button x:Name="OneBtn" Content="1" Grid.Column="0" Grid.Row="4" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="TwoBtn" Content="2" Grid.Column="1" Grid.Row="4" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="ThreeBtn" Content="3" Grid.Column="2" Grid.Row="4" Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick" />
+        <Button x:Name="PlusBtn" Content="+" Grid.Column="3" Grid.Row="4" Style="{StaticResource baseBtnStyle}" Click="OperationBtn_Click"/>
 
-        <Button x:Name="ZeroBtn" Content="0" Grid.Column="0" Grid.Row="5"  Style="{StaticResource numberBtnStyle}"/>
-        <Button x:Name="DotBtn" Content="." Grid.Column="1" Grid.Row="5" Style="{StaticResource baseBtnStyle}"/>
-        <Button x:Name="ResultBtn" Content="=" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource baseBtnStyle}"/>
+        <Button x:Name="ZeroBtn" Content="0" Grid.Column="0" Grid.Row="5"  Style="{StaticResource numberBtnStyle}" Click="NumberBtnClick"/>
+        <Button x:Name="DotBtn" Content="." Grid.Column="1" Grid.Row="5" Style="{StaticResource baseBtnStyle}" Click="DotBtn_Click"/>
+        <Button x:Name="ResultBtn" Content="=" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource baseBtnStyle}" Click="ResultBtn_Click"/>
     </Grid>
 </Window>
