@@ -114,6 +114,7 @@ namespace _16_Calculator
         {
             DisplayTB.Text = (double.Parse(DisplayTB.Text) / 100).ToString();
         }
+
     }
 
     enum Operation
