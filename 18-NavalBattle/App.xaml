@@ -1,0 +1,27 @@
+﻿<Application x:Class="_18_NavalBattle.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_18_NavalBattle"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        <Style TargetType="Rectangle" x:Key="Empty">
+            <Setter Property="Fill" Value="Azure"/>
+            <Setter Property="Stroke" Value="Gray"/>
+            <Setter Property="Cursor" Value="Hand" />
+        </Style>
+
+        <Style TargetType="Rectangle" x:Key="Shot" BasedOn="{StaticResource Empty}">
+            <Setter Property="Fill" Value="Blue"/>
+        </Style>
+
+        <Style TargetType="Rectangle" x:Key="Ship" BasedOn="{StaticResource Empty}">
+            <Setter Property="Fill" Value="Silver"/>
+        </Style>
+
+        <Style TargetType="Rectangle" x:Key="Wreck" BasedOn="{StaticResource Empty}">
+            <Setter Property="Fill" Value="Red"/>
+        </Style>
+        
+    </Application.Resources>
+</Application>
