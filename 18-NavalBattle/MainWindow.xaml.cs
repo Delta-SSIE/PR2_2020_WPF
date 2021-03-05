@@ -21,19 +21,31 @@ namespace _18_NavalBattle
     public partial class MainWindow : Window
     {
         const int dimension = 10;
+        const int shipCount = 10;
 
         private Rectangle[,] playerTiles;
         private Rectangle[,] computerTiles;
+
+        private Player player;
+        private Player computer;
 
         public MainWindow()
         {
             InitializeComponent();
 
+            player = new Player(dimension, shipCount); 
+            computer = new Player(dimension, shipCount);
+
             playerTiles = InitializeDisplay(PlayerSeaDisplay);
-            computerTiles = InitializeDisplay(ComputerSeaDisplay);
+            computerTiles = InitializeDisplay(ComputerSeaDisplay, true);
+
+            RenderMap(playerTiles, player.PrivateMap);
+            RenderMap(computerTiles, computer.PublicMap);
+
+            RenderScore();
         }
 
-        Rectangle[,] InitializeDisplay(Grid seaDisplay)
+        Rectangle[,] InitializeDisplay(Grid seaDisplay, bool isClickable = false)
         {
             seaDisplay.Margin = new Thickness(10);
             //seaDisplay.ShowGridLines = true;
@@ -61,7 +73,9 @@ namespace _18_NavalBattle
                     Grid.SetRow(tile, y);
                     Grid.SetColumn(tile, x);
 
-                    tile.MouseDown += Tile_MouseDown;
+                    if (isClickable)
+                        tile.MouseDown += Tile_MouseDown;
+
                     RenderTile(tile, TileState.Empty);
 
                     tiles[x, y] = tile;
@@ -76,6 +90,35 @@ namespace _18_NavalBattle
             Rectangle clicked = (Rectangle)sender;
             Coordinates target = FindCoordinates(clicked);
             //co s tim dal
+
+            //zapis pocitaci vystrel
+            computer.HandleShot(target);
+            RenderTile(clicked, computer.PublicMap[target.X, target.Y]);
+            RenderScore();
+
+            //zjistim, jestli je konec
+            if (computer.IsFinished)
+            {
+                MessageBox.Show("You win!");
+                Close();
+            }
+
+            //kdyz ne
+
+            //pocitac vymysli kam strilet
+            target = computer.RandomTarget(player.PublicMap);
+
+            //zapis hraci vystrel
+            player.HandleShot(target);
+            RenderTile(playerTiles[target.X, target.Y], player.PrivateMap[target.X, target.Y]);
+            RenderScore();
+
+            //zjisti, jestli je konec
+            if (player.IsFinished)
+            {
+                MessageBox.Show("You lose!");
+                Close();
+            }
         }
 
         private Coordinates FindCoordinates(Rectangle clicked)
@@ -110,6 +153,23 @@ namespace _18_NavalBattle
                     tile.Style = FindResource("Wreck") as Style;
                     break;
             }
+        }
+
+        private void RenderMap (Rectangle[,] tiles, TileState[,] map)
+        {
+            for (int x = 0; x < dimension; x++)
+            {
+                for (int y = 0; y < dimension; y++)
+                {
+                    RenderTile(tiles[x,y], map[x,y]);
+                }
+            }
+        }
+
+        private void RenderScore()
+        {
+            PlayerScore.Content = $"{player.Wrecks} / {shipCount}";
+            ComputerScore.Content = $"{computer.Wrecks} / {shipCount}";
         }
     }
 }
