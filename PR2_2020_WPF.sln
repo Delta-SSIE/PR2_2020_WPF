@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17-Timer", "17-Timer\17-Tim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-NavalBattle", "18-NavalBattle\18-NavalBattle.csproj", "{542441DF-B713-4552-926D-F21C0AA6840F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19-NavalBattle-L2", "19-NavalBattle-L2\19-NavalBattle-L2.csproj", "{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{542441DF-B713-4552-926D-F21C0AA6840F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{542441DF-B713-4552-926D-F21C0AA6840F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{542441DF-B713-4552-926D-F21C0AA6840F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
