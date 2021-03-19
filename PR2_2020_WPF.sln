@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-NavalBattle", "18-NavalB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19-NavalBattle-L2", "19-NavalBattle-L2\19-NavalBattle-L2.csproj", "{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20-Hodiny", "20-Hodiny\20-Hodiny.csproj", "{80A34F1D-7444-40FB-94E1-44D1C5BEB328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21-Catch-me-if-you-can", "21-Catch-me-if-you-can\21-Catch-me-if-you-can.csproj", "{F661D5E6-62BA-4076-B2E8-EDC23DD21D6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A1FD61F-D9EC-4ED3-94D2-18B544ED8C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A34F1D-7444-40FB-94E1-44D1C5BEB328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A34F1D-7444-40FB-94E1-44D1C5BEB328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A34F1D-7444-40FB-94E1-44D1C5BEB328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A34F1D-7444-40FB-94E1-44D1C5BEB328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F661D5E6-62BA-4076-B2E8-EDC23DD21D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F661D5E6-62BA-4076-B2E8-EDC23DD21D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F661D5E6-62BA-4076-B2E8-EDC23DD21D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F661D5E6-62BA-4076-B2E8-EDC23DD21D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
