@@ -115,9 +115,7 @@ namespace _19_NavalBattle_L2
             if (hit) //takže se bude čekat na další zásah
                 return;
 
-            hit = true;
-
-            while (hit)
+            do
             {
 
                 //pocitac vymysli kam strilet
@@ -137,7 +135,7 @@ namespace _19_NavalBattle_L2
                     Close();
                     return;
                 }
-            }
+            } while(hit);
         }
 
         private Coordinates FindCoordinates(Rectangle clicked)

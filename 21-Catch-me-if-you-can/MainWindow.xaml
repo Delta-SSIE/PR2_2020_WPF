@@ -17,7 +17,7 @@
             <TextBlock Text="/" FontSize="40"/>
             <TextBlock Text="0" x:Name="All" FontSize="40"/>
         </StackPanel>
-        <Canvas Grid.Row="1">
+        <Canvas x:Name="Board" Grid.Row="1" MouseUp="Board_MouseUp" Background="Transparent" > <!--Pridano pozadi--> 
             <Rectangle x:Name="Target" HorizontalAlignment="Left" Width="40" Height="40" Stroke="Black" VerticalAlignment="Top" Margin="142,124,0,0" Fill="Red" MouseUp="Rectangle_MouseUp"/>
         </Canvas>
 

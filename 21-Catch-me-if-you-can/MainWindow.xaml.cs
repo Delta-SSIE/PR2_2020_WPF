@@ -29,8 +29,10 @@ namespace _21_Catch_me_if_you_can
         const int hiddenMin = 500;
         const int hiddenMax = 3000;
 
-        const int displayedMin = 200;
-        const int displayedMax = 700;
+        const int displayedMin = 1200;
+        const int displayedMax = 1700;
+
+        const int margin = 10;
 
         private Random random = new Random();
 
@@ -46,6 +48,7 @@ namespace _21_Catch_me_if_you_can
             HideMe();
             showTimer.Tick += ShowTimer_Tick;
             hideTimer.Tick += HideTimer_Tick;
+            All.Text = turns.ToString();
         }
 
         private void HideTimer_Tick(object sender, EventArgs e)
@@ -63,13 +66,19 @@ namespace _21_Catch_me_if_you_can
             score++;
             Caught.Text = score.ToString();
             HideMe();
+            e.Handled = true; //pridano
         }
 
         private void ShowMe()
         {
             turn++;
-            All.Text = turn.ToString();
             showTimer.Stop();
+            Target.Margin = new Thickness(
+                margin + random.Next((int) (Board.ActualWidth - Target.Width) - 2 * margin),
+                margin + random.Next((int) (Board.ActualHeight - Target.Height) - 2 * margin), 
+                0,
+                0
+            );
             Target.Visibility = Visibility.Visible;
             hideTimer.Interval = TimeSpan.FromMilliseconds(random.Next(displayedMin, displayedMax));
             hideTimer.Start();
@@ -81,6 +90,12 @@ namespace _21_Catch_me_if_you_can
             Target.Visibility = Visibility.Hidden;
             showTimer.Interval = TimeSpan.FromMilliseconds(random.Next(hiddenMin, hiddenMax));
             showTimer.Start();
+        }
+
+        private void Board_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            score--;
+            Caught.Text = score.ToString(); //pridano
         }
     }
 }
