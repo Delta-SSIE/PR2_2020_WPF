@@ -42,5 +42,11 @@ namespace _23_SnakeGame
 
             return neighbour;
         }
+
+        public override bool Equals(object obj)
+        {
+            Coordinates otherPoint = (Coordinates)obj;
+            return this.X == otherPoint.X && this.Y == otherPoint.Y;
+        }
     }
 }
