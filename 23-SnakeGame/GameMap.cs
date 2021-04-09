@@ -32,6 +32,9 @@ namespace _23_SnakeGame
             Height = height;
         }
 
+        /// <summary>
+        /// Generates a new map, places walls all around
+        /// </summary>
         public void CreateMap()
         {
             _map = new Terrain[Width, Height];
@@ -47,6 +50,10 @@ namespace _23_SnakeGame
             }
         }
 
+        /// <summary>
+        /// Places a new unit of food into a random place (except snake positions)
+        /// </summary>
+        /// <param name="snake"></param>
         public void PlaceFood(Snake snake)
         {
             Coordinates location = new Coordinates();
@@ -60,6 +67,11 @@ namespace _23_SnakeGame
             _map[location.X, location.Y] = Terrain.Food;
         }
 
+        /// <summary>
+        /// Returns terrain at specified location
+        /// </summary>
+        /// <param name="loc"></param>
+        /// <returns></returns>
         public Terrain AtCoordinates(Coordinates loc)
         {
             if (loc.X < 0 || loc.Y < 0 || loc.X >= Width || loc.Y >= Height)
@@ -68,6 +80,10 @@ namespace _23_SnakeGame
             return _map[loc.X, loc.Y];
         }
 
+        /// <summary>
+        /// Removes food at specified location (if any)
+        /// </summary>
+        /// <param name="loc"></param>
         public void EatFood(Coordinates loc)
         {
             if (_map[loc.X, loc.Y] == Terrain.Food)

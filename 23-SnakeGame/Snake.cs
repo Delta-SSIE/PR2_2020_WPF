@@ -8,8 +8,14 @@ namespace _23_SnakeGame
 {
     class Snake
     {
+        /// <summary>
+        /// Private storage of snake segments
+        /// </summary>
         private Queue<Coordinates> _segments;
 
+        /// <summary>
+        /// Public clone of snake segments, for purpose of render
+        /// </summary>
         public Coordinates[] Segments
         {
             get
@@ -22,7 +28,7 @@ namespace _23_SnakeGame
         {
             get
             {
-                return _segments.Count();
+                return _segments.Count(); //snake length is the number of elements in segments storage (queue)
             }
         }
 
@@ -30,7 +36,7 @@ namespace _23_SnakeGame
         {
             get
             {
-                return _segments.Last();
+                return _segments.Last(); //snake head is the element added last to the queue
             }
         }
 
@@ -42,6 +48,11 @@ namespace _23_SnakeGame
             _segments.Enqueue(head);
         }
 
+        /// <summary>
+        /// Checks collision with snake body
+        /// </summary>
+        /// <param name="loc"></param>
+        /// <returns>True in case of collision, otherwise false</returns>
         public bool IsInSnake(Coordinates loc)
         {
             foreach (Coordinates segment in _segments)
