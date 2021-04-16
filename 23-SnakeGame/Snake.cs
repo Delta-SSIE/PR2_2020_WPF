@@ -20,7 +20,7 @@ namespace _23_SnakeGame
         {
             get
             {
-                return _segments.ToArray();
+                return _segments.Reverse().ToArray();
             }
         }
 

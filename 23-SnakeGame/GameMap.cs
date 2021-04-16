@@ -42,10 +42,10 @@ namespace _23_SnakeGame
             {
                 for (int y = 0; y < Height; y++)
                 {
-                    if (x == 0 || y < 0 || x == Width - 1 || y == Height -1)
-                        _map[Width, Height] = Terrain.Wall;
+                    if (x == 0 || y == 0 || x == Width - 1 || y == Height -1)
+                        _map[x, y] = Terrain.Wall;
                     else
-                        _map[Width, Height] = Terrain.Grass;
+                        _map[x, y] = Terrain.Grass;
                 }
             }
         }
@@ -62,7 +62,7 @@ namespace _23_SnakeGame
                 location.X = _random.Next(1, Width - 1); //avoid wall
                 location.Y = _random.Next(1, Height - 1); //avoid wall
             }
-            while (!snake.IsInSnake(location)); //avoid snake
+            while (snake.IsInSnake(location)); //avoid snake
 
             _map[location.X, location.Y] = Terrain.Food;
         }
