@@ -44,6 +44,7 @@ namespace _23_SnakeGame
         private void Timer_Tick(object sender, EventArgs e)
         {
             controller.Step();
+
             RenderPlan(controller.Snake, controller.Map);
             if (controller.State == GameState.Lost)
             {

@@ -16,7 +16,7 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="1" Grid.Column="0" Grid.Row="0" x:Name="LengthTB"  Margin="10" FontSize="20" TextAlignment="Left"/>
+        <TextBlock Text="1" Grid.Column="0" Grid.Row="0" x:Name="LengthTB"  Margin="10" FontSize="20" TextAlignment="Center"/>
         <Button Content="Start" Grid.Column="2" Grid.Row="0" x:Name="StartBtn" Margin="10" Click="StartBtn_Click"/>
         <Border BorderBrush="Black" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10" BorderThickness="2">
             <Grid x:Name="GamePlan" />
