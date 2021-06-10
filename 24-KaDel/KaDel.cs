@@ -41,7 +41,7 @@ namespace _24_KaDel
                     noveY++;
                     break;
             }
-            if (X >= 0 && Y >=0 && X < _rozmer && Y < _rozmer)
+            if (noveX >= 0 && noveY >=0 && noveX < _rozmer && noveY < _rozmer)
             {
                 // jde to
                 X = noveX;

@@ -22,6 +22,7 @@ namespace _24_KaDel
     {
         const int rozmer = 10;
         private KaDel kaDel;
+        private Rectangle[,] policka;
         public MainWindow()
         {
             InitializeComponent();
@@ -43,6 +44,8 @@ namespace _24_KaDel
                 Mapa.RowDefinitions.Add(gridRow);
             }
 
+            policka = new Rectangle[rozmer,rozmer];
+
             for (int x = 0; x < rozmer; x++)
             {
                 for (int y = 0; y < rozmer; y++)
@@ -51,8 +54,13 @@ namespace _24_KaDel
                     Mapa.Children.Add(rectangle);
                     Grid.SetRow(rectangle, y);
                     Grid.SetColumn(rectangle, x);
+                    policka[x, y] = rectangle;
                 }
             }
+
+            Image robot = new Image();
+            Mapa.Children.Add(robot);
+            robot.Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + @"\img\vpravo.png"));
         }
     }
 }
