@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:_24_KaDel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Rectangle" x:Key="Policko">
+            <Setter Property="Stroke" Value="Black" />
+            <Setter Property="StrokeThickness" Value="1" />
+        </Style>
+        <Style TargetType="Rectangle" x:Key="PolickoPlne" BasedOn="{StaticResource Policko}">
+            <Setter Property="Fill" Value="Crimson"/>
+        </Style>
+        <Style TargetType="Rectangle" x:Key="PolickoPrazdne" BasedOn="{StaticResource Policko}">
+            <Setter Property="Fill" Value="AliceBlue"/>
+        </Style>
     </Application.Resources>
 </Application>
